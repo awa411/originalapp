@@ -1,0 +1,15 @@
+<header class="top-page-header">
+  <%= link_to image_tag("紙とペンのアイコン素材.png", class: "original-icon"), "/" %>
+  <div class="search-area">
+    <%= form_with(url: search_articles_path, local: true, class: "search-form") do |f| %>
+      <%= f.text_field :search_keyword, placeholder: "キーワードを入力してください", class: "search-keyword" %>
+      <%= f.submit "検索", class: "search-btn" %>
+    <% end %>
+  </div>
+  <div class="nav">
+    <ul class="lists-user">
+      <li><%= link_to "ログイン", root_path, class:'login' %></li>
+      <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up"%></li>
+    </ul>
+  </div>
+</header>
