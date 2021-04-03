@@ -1,24 +1,34 @@
-# README
+# UserTable
+| Column                  | Type    | Options                   |
+| ----------------------- | ------- | ------------------------- |
+| nickname                | string  | null:false                |
+| email                   | string  | null:false, unique:true   |
+| encrypted_password      | string  | null:false                |
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+has_many :articles
+has_many :purchases
 
-Things you may want to cover:
 
-* Ruby version
+# ArticleTable
+| Column                  | Type      | Options                   |
+| ----------------------- | --------- | ------------------------- |
+| title                   | string    | null:false                |
+| text                    | string    | null:false                |
+| category_id             | integer   | null:false                |
+| user_id                 | references| foreign_key:true          |
 
-* System dependencies
+### Association
+be_longs :user
+has_many :purchases
 
-* Configuration
 
-* Database creation
+# PurchaseTable
+| Column                  | Type       | Options                   |
+| ----------------------- | ---------- | ------------------------- |
+| user                    | references | foreign_key:true          |
+| article                 | references | foreign_key:true          |
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+be_longs :user
+be_longs :article
