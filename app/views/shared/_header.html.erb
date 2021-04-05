@@ -7,9 +7,17 @@
     <% end %>
   </div>
   <div class="nav">
-    <ul class="lists-user">
-      <li><%= link_to "ログイン", root_path, class:'login' %></li>
-      <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up"%></li>
+    <ul class="list-user">
+      <% if user_signed_in?%>
+          <li><%= link_to current_user.nickname, root_path, class: 'user-nickname'%></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, class: 'logout'%></li>
+      <% else %>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'signup' %></li>
+          <li><%= link_to "ログイン", new_user_session_path, class: 'login' %></li>
+      <% end %>
+    </ul>
+    <ul class="list-action">
+      <li><%= link_to "投稿", new_article_path, class: 'new-article' %></ul>
     </ul>
   </div>
 </header>

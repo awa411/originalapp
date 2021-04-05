@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
          PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
 
+         validates :nickname, presence: true
          validates_format_of :password, with: PASSWORD_REGEX
-
-         belongs_to :user
+         has_many :articles
          #has_many   :purchases
 end
