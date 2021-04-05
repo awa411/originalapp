@@ -7,5 +7,6 @@ class Article < ApplicationRecord
   end
 
   has_many :articles
+  belongs_to :user
   #has_many :purchases
 end
