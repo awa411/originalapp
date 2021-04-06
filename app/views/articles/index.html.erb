@@ -4,9 +4,9 @@
   <div class="side">
   </div>
   <div class="main">
-    
-    <% render partial: "articles", collection: @articles %>
-
+    <div class="articles-wrapper">
+      <%= render partial: "article", collection: @articles %>
+    </div>
   </div>
 </div>
 
