@@ -6,10 +6,58 @@
 
 .side {
   width: 250px;
+  height: 100%;
   background-color: bisque;
 }
 
 .main {
   width: calc(100% - 250px);
-  background-color: burlywood;
+  height: 100%;
+  overflow: scroll;
+}
+
+.articles-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.articles-content {
+  width: calc((100% - 40px) / 3 );
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articles-image,
+.articles-title,
+.articles-category,
+.articles-nickname {
+  text-decoration: none;
+}
+
+
+.articles-image {
+  width: 100%;
+  height: 40%;
+  margin-bottom: 5px;
+}
+
+.articles-title{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.articles-category {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.articles-nickname {
+  margin-bottom: 10px;
+  font-size: 15px;  
 }

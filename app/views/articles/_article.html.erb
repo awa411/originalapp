@@ -1,0 +1,6 @@
+<div class="articles-content">
+  <%= link_to image_tag(article.image, class: "articles-image"), root_path %>
+  <%= link_to article.title, root_path, class: "articles-title" %>
+  <%= link_to article.category.name, root_path, class: "articles-category" %>
+  <%= link_to article.user.nickname, root_path, class: "articles-nickname" %>
+</div>
