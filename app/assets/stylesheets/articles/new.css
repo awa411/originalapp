@@ -11,5 +11,53 @@
 
 .new-article-main {
   width: calc(100% - 250px);
-  background-color: burlywood;
+  height: 100%;
+  overflow: scroll;
+}
+
+.new-article-wrapper{
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.article-form {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.article-image,
+.article-category,
+.article-title,
+.article-text,
+.article-post {
+  display: block;
+  margin: 25px;
+}
+
+.article-title,
+.article-text{
+  border: none;
+}
+
+.article-title,
+.article-text {
+  padding: 10px;
+  width: 90%;
+}
+
+.article-post {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: lightblue;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.article-text {
+  height: 90%; 
 }
