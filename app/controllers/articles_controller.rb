@@ -12,12 +12,20 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to root_path
     else
-      binding.pry
       render :new
     end
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+  end
 
   private
     def article_params
