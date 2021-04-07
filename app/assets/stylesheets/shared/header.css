@@ -11,7 +11,8 @@
 }
 
 .logout,
-.post {
+.post,
+.new-article {
   height: 20px;
   width:  80px;
 }

@@ -1,5 +1,5 @@
 <header class="top-page-header">
-  <%= link_to image_tag("1617598356273.png", class: "original-icon"), "/" %>
+  <%= link_to image_tag("1617604047664.png", class: "original-icon"), "/" %>
   <div class="search-area">
     <%= form_with(url: search_articles_path, local: true, class: "search-form") do |f| %>
       <%= f.text_field :search_keyword, placeholder: "キーワードを入力してください", class: "search-keyword" %>
@@ -10,14 +10,14 @@
     <ul class="list-user">
       <% if user_signed_in?%>
           <li><%= link_to current_user.nickname, root_path, class: 'user-nickname'%></li>
-          <li><%= link_to image_tag("1617599376637.png", class: "logout"), destroy_user_session_path %></li>
+          <li><%= link_to image_tag("1617604056776.png", class: "logout"), destroy_user_session_path, method: :delete %></li>
       <% else %>
           <li><%= link_to "新規登録", new_user_registration_path, class: 'signup' %></li>
           <li><%= link_to "ログイン", new_user_session_path, class: 'login' %></li>
       <% end %>
     </ul>
     <ul class="list-action">
-      <li><%= link_to image_tag("1617599382649.png", class: "logout"), new_article_path, class: 'new-article' %></ul>
+      <li><%= link_to image_tag("1617604053937.png", class: 'new-article'), new_article_path %></ul>
     </ul>
   </div>
 </header>
