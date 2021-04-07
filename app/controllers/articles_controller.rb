@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :search_articles, only: [:index, :search, :show, :new, :edit]
+  before_action :category_obj, only: [:index, :search, :show, :new, :edit]
   def index
     @articles = Article.all
   end
@@ -51,5 +52,9 @@ class ArticlesController < ApplicationController
 
     def search_articles
       @p = Article.ransack(params[:q])
+    end
+
+    def category_obj
+      @categories = Category.all
     end
 end

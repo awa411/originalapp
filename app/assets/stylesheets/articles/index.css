@@ -7,7 +7,7 @@
 .side {
   width: 250px;
   height: 100%;
-  background-color: bisque;
+  overflow: scroll;
 }
 
 .main {
