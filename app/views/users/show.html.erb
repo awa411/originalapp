@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+
+<div class="show-user-middle">
+  <div class="show-user-side">
+  </div>
+  <div class="show-user-main">
+    <div class="show-user-nickname"><%= @user.nickname %>さんの投稿記事一覧</div>
+    <div class="articles-wrapper">
+    <%= render partial: "articles/article", collection: @articles %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
