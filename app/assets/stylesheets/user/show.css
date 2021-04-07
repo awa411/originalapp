@@ -1,19 +1,28 @@
-.middle {
+.show-user-middle {
   display: flex;
   width: 100vw;
   height: calc(100vh - 170px);
 }
 
-.side {
+.show-user-side {
   width: 250px;
   height: 100%;
   background-color: bisque;
 }
 
-.main {
+.show-user-main {
   width: calc(100% - 250px);
   height: 100%;
-  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-user-nickname {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .articles-wrapper {
@@ -22,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  overflow: scroll;
   padding: 20px;
 }
 
@@ -35,7 +44,7 @@
 
 .articles-image,
 .articles-title,
-.articles-category a,
+.articles-category,
 .articles-nickname {
   text-decoration: none;
 }
@@ -60,4 +69,18 @@
 .articles-nickname {
   margin-bottom: 10px;
   font-size: 15px;  
+}
+
+.articles-ope {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.articles-edit {
+  text-decoration: none;
+}
+
+.articles-destroy {
+  text-decoration: none;
 }
