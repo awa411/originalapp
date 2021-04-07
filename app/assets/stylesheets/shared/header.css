@@ -1,18 +1,47 @@
 .top-page-header {
   display: flex;
-  height: 70px;
+  height: 50px;
   width: 100vw;
-  background-color: gray;
+  border-bottom: rgb(240, 234, 234) solid 3px;
 }
 
 .original-icon {
   height: 50px;
-  width:  50p;
+  width:  50px;
+  margin-left: 20%;
 }
 
-.logout,
-.post,
+.nav {
+  display: flex;
+  width: calc( 100% - 50px );
+  height: 100%;
+  align-items: center;
+}
+
+.search-area {
+  margin-left: 50%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 0 auto;
+}
+
 .new-article {
+  height: 30px;
+  width: 80px;
+  margin-right: 40px;
+}
+
+.list-user {
+  list-style: none;
+}
+
+.signin,
+.signup,
+.signout{
   height: 20px;
   width:  80px;
+  margin-top: 5px;
 }

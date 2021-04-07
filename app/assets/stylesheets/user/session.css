@@ -1,5 +1,5 @@
 .session-middle {
-  height: calc(100vh - 170px);
+  height: calc(100vh - 110px);
   width: 100vw;
   display: flex;
   justify-content: center;
