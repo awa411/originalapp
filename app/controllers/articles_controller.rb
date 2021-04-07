@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :search_articles, only: [:index, :search, :show, :new, :edit]
   def index
     @articles = Article.all
   end
@@ -39,8 +40,16 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @results = @p.result
+  end
+
   private
     def article_params
       params.require(:article).permit(:image, :title, :text, :category_id).merge(user_id: current_user.id)
+    end
+
+    def search_articles
+      @p = Article.ransack(params[:q])
     end
 end

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
+    @p = Article.ransack(params[:q])
     @user = User.find(params[:id])
     @articles = Article.where(user_id: params[:id])
   end
