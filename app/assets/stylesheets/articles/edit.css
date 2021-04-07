@@ -1,53 +1,53 @@
-.new-article-middle {
+.edit-article-middle {
   display: flex;
   width: 100vw;
   height: calc(100vh - 170px);
 }
 
-.new-article-side {
+.edit-article-side {
   width: 250px;
   background-color: bisque;
 }
 
-.new-article-main {
+.edit-article-main {
   width: calc(100% - 250px);
   height: 100%;
   overflow: scroll;
 }
 
-.new-article-wrapper{
+.edit-article-wrapper{
   width: 100%;
   height: 100%;
   overflow: scroll;
 }
 
-.new-article-form {
+.edit-article-form {
   width: 100%;
   height: 100%;
   overflow: scroll;
 }
 
-.new-article-image,
-.new-article-category,
-.new-article-title,
-.new-article-text,
-.new-article-post {
+.edit-article-image,
+.edit-article-category,
+.edit-article-title,
+.edit-article-text,
+.edit-article-post {
   display: block;
   margin: 25px;
 }
 
-.new-article-title,
-.new-article-text{
+.edit-article-title,
+.edit-article-text{
   border: none;
 }
 
-.new-article-title,
-.new-article-text {
+.edit-article-title,
+.edit-article-text {
   padding: 10px;
   width: 90%;
 }
 
-.new-article-post {
+.edit-article-post {
   width: 150px;
   padding: 10px;
   border: 1px solid white;
@@ -58,6 +58,6 @@
   margin: 0 auto 50px;
 }
 
-.new-article-text {
+.edit-article-text {
   height: 90%; 
 }
