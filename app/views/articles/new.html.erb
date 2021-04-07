@@ -1,22 +1,18 @@
-<%= render "shared/header" %>
+<div class="new-article-middle">
+  <div class="new-article-side">
+  </div>
+  <div class="new-article-main">
+    <div class="new-article-wrapper">
+      <%= form_with model: @article, url: articles_path, local: true, class: "new-article-form" do |f| %>
 
-  <div class="new-article-middle">
-    <div class="new-article-side">
-    </div>
-    <div class="new-article-main">
-      <div class="new-article-wrapper">
-        <%= form_with model: @article, url: articles_path, local: true, class: "new-article-form" do |f| %>
+        <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
 
-          <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
-
-          <%= f.file_field :image, id: "new-article_image", class: "new-article-image" %>
-          <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "new-article-category") %>
-          <%= f.text_field :title, placeholder: "タイトル", class: "new-article-title" %>
-          <%= f.text_area :text, placeholder: "本文", class: "new-article-text" %>
-          <%= f.submit "投稿", class: "new-article-post", id: "new-article-post" %>
-        <% end %>
-      </div>
+        <%= f.file_field :image, id: "new-article_image", class: "new-article-image" %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "new-article-category") %>
+        <%= f.text_field :title, placeholder: "タイトル", class: "new-article-title" %>
+        <%= f.text_area :text, placeholder: "本文", class: "new-article-text" %>
+        <%= f.submit "投稿", class: "new-article-post", id: "new-article-post" %>
+      <% end %>
     </div>
   </div>
-
-<%= render "shared/footer" %>
+</div>
