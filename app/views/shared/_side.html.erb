@@ -1,0 +1,7 @@
+  <div class="categories">
+    <% @categories.each do |category| %>
+      <div class="category">
+        <%=link_to category.name, articles_search_path(@q, :'q[category_id_eq' => "#{category.id}") %>
+      </div>
+    <%end%>
+  </div>

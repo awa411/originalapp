@@ -1,6 +1,7 @@
 <div class="show-article-middle" >
   <div class="show-article-side">
-    </div>
+    <%= render partial: "shared/side" %>
+  </div>
   <div class="show-article-main">
     <div class="show-article-content">
       <div class="show-article-title"><%= @article.title %></div>
@@ -8,7 +9,7 @@
       <div class="show-article-nickname">筆者：<%= link_to @article.user.nickname, root_path %></div>
       <%= image_tag(@article.image, class: "show-article-image") %>
       <div class="show-article-text"><%= @article.text %></div>
+       <%= link_to "トップページへ", root_path, class: "show-to-toppage" %>
     </div>
-    <%= link_to "トップページへ", root_path, class: "show-to-toppage" %>
   </div>
 </div>
