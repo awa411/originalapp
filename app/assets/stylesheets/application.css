@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ a:hover {
+  color: rgb(8, 8, 8);
+}
+
+a {
+  color: gray;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.session-middle,
+.registration-middle,
+.edit-article-main,
+.new-article-main,
+.show-article-main,
+.main,
+.user-main {
+  background-image: url("cork-board.png");
+}
+
+.article-content,
+.user-article-content,
+.show-article-content {
+  background-image: url("notebook.png");
+}
+
+
+

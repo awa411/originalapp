@@ -1,4 +1,4 @@
-.footer,
+footer,
 .push {
   height: 60px;
   width: 100vw;
@@ -6,9 +6,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0px;
 }
 
 .footer-original-icon {
   height: 60px;
-  width: 70px;
+  width: 60px;
 }

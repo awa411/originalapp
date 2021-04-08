@@ -1,16 +1,17 @@
+<%= render "shared/header" %>
 <div class="middle">
   <div class="side">
     <%= render partial: "shared/side" %>
   </div>
   <div class="main">
-    <div class="page-text">投稿一覧</div>
+    <div class="page-text">みんなの投稿記事</div>
     <div class="article-wrapper">
       
     <% @articles.each do |article| %>
       <div class="article-content">
         <%= link_to image_tag(article.image, class: "article-image"), article_path(article.id) %>
         <%= link_to article.title, article_path(article.id), class: "article-title" %>
-        <div class="article-category">カテゴリー：<%= link_to article.category.name, root_path %></div>
+        <div class="article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
         <div class="article-nickname">筆者：<%= link_to article.user.nickname, user_path(article.user_id) %></div>
       </div>
     <% end %>
@@ -18,4 +19,5 @@
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
 

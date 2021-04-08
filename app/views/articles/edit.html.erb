@@ -1,8 +1,10 @@
+<%= render "shared/header" %>
 <div class="edit-article-middle">
   <div class="edit-article-side">
     <%= render partial: "shared/side" %>
   </div>
   <div class="edit-article-main">
+    <div class="page-text"><%= "「#{@article.title}」を編集する" %></div>
     <div class="edit-article-wrapper">
       <%= form_with model: @article, url: article_path(@article.id), local: true, class: "edit-article-form" do |f| %>
   
@@ -17,3 +19,4 @@
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>

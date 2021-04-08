@@ -1,24 +1,26 @@
 <header class="top-page-header">
-  <%= link_to image_tag("1617604047664.png", class: "original-icon"), "/" %>
+  <div class="original-icon">
+    <%= link_to image_tag("紙とペンのアイコン素材.png"), "/" %>
+  </div>
   <div class="nav">
     <div class="search-area">
       <%= search_form_for @p, url: articles_search_path, class: "search-form" do |f| %>
         <%= f.search_field :title_eq, placeholder: "記事タイトルを入力してください", class: "search-keyword" %>
-        <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: 'カテゴリー'%>
+        <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: 'カテゴリー', class: "search-category"%>
         <%= f.submit "検索", class: "search-btn" %>
       <% end %>
     </div>
     <div class="nav-right">
       <% if user_signed_in? %>
-        <%= link_to image_tag("1617604053937.png", class: 'new-article'), new_article_path %>
+        <%= link_to "投稿", new_article_path, class: 'new-article' %>
       <% end %>
       <ul class="list-user">
         <% if user_signed_in?%>
-            <li><%= link_to current_user.nickname, root_path, class: 'user-nickname'%>さん</li>
-            <li><%= link_to image_tag("1617604056776.png", class: "signout"), destroy_user_session_path, method: :delete %></li>
+            <li class="user-nickname-text"><%= link_to current_user.nickname, user_path(current_user.id) %>さん</li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout" %></li>
         <% else %>
-            <li><%= link_to image_tag("1617604050744.png", class: 'signup'), new_user_registration_path %></li>
-            <li><%= link_to image_tag("1617604059436.png", class: 'signin'), new_user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: 'signup' %></li>
+            <li><%= link_to "ログイン", new_user_session_path, class: 'signin' %></li>
         <% end %>
       </ul>
     </div>

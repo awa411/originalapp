@@ -1,9 +1,8 @@
 .edit-article-side,
 .show-article-side,
-.user-article-side,
+.user-side,
 .new-article-side,
 .side {
-  overflow: scroll;
   border-right: rgb(240, 232, 232) solid 3px;
 }
 
@@ -11,11 +10,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
 }
 
 .category a,
 .category {
   text-decoration: none;
   font-size: 25px;
+  font-family: Makinas-4-Square;
+  margin: 10px;
 }

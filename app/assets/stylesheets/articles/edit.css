@@ -1,29 +1,25 @@
 .edit-article-middle {
   display: flex;
   width: 100vw;
-  height: calc(100vh - 110px);
+  padding-bottom: 60px;
 }
 
 .edit-article-side {
-  width: 250px;
+  width: 200px;
 }
 
 .edit-article-main {
-  width: calc(100% - 250px);
-  height: 100%;
-  overflow: scroll;
+  width: calc(100% - 200px);
 }
 
-.edit-article-wrapper{
+.edit-article-wrapper {
   width: 100%;
   height: 100%;
-  overflow: scroll;
 }
 
 .edit-article-form {
   width: 100%;
   height: 100%;
-  overflow: scroll;
 }
 
 .edit-article-image,
@@ -54,9 +50,9 @@
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: 0 auto 50px;
+  margin: 0 auto 60px;
 }
 
 .edit-article-text {
-  height: 90%; 
+  height: 50%;
 }

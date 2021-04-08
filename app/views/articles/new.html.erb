@@ -1,8 +1,10 @@
+<%= render "shared/header" %>
 <div class="new-article-middle">
   <div class="new-article-side">
     <%= render partial: "shared/side" %>
   </div>
   <div class="new-article-main">
+    <div class="page-text">新規投稿</div>
     <div class="new-article-wrapper">
       <%= form_with model: @article, url: articles_path, local: true, class: "new-article-form" do |f| %>
 
@@ -17,3 +19,4 @@
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
