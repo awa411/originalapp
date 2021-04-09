@@ -25,8 +25,9 @@ header {
 }
 
 .original-icon {
-  width: 3.5%;
+  width: 14%;
   margin-left: 1%;
+  padding: 5px;
 }
 .original-icon a,
 .original-icon img{
@@ -37,12 +38,12 @@ header {
 .nav {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 86%;
   align-items: center;
 }
 
 .search-area {
-  margin-left: 40%;
+  margin-left: 30%;
 }
 
 .search-keyword,

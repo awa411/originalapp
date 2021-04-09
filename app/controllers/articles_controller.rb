@@ -1,6 +1,9 @@
 class ArticlesController < ApplicationController
-  before_action :search_articles, only: [:index, :search, :show, :new, :edit]
-  before_action :category_obj, only: [:index, :search, :show, :new, :edit]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destoy]
+  before_action :article_find, only: [:show, :edit, :update, :destroy]
+  before_action :is_current_user, only: [:edit, :update, :destroy]
+  before_action :search_articles, only: [:index, :search, :show, :new, :edit, :update]
+  before_action :category_obj, only: [:index, :search, :show, :new, :edit, :update]
   def index
     @articles = Article.all
   end
@@ -14,21 +17,21 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to root_path
     else
+      search_articles
+      category_obj
       render :new
     end
   end
 
   def show
-    @article = Article.find(params[:id])
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @title = @article.title
   end
 
   def update
-    @article = Article.find(params[:id])
-    if@article.update(article_params)
+    if @article.update(article_params)
       redirect_to article_path(params[:id])
     else
       render :edit
@@ -36,7 +39,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to root_path
   end
@@ -56,5 +58,21 @@ class ArticlesController < ApplicationController
 
     def category_obj
       @categories = Category.all
+    end
+
+    def article_find
+      @article = Article.find(params[:id])
+    end
+
+    def judge_signed_in
+      unless user_signed_in?
+        ridirect_to new_user_registration_path
+      end
+    end
+
+    def is_current_user
+      unless current_user.id == @article.user_id
+        redirect_to new_user_registration_path
+      end
     end
 end
