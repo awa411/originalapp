@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   before_action :search_articles, only: [:index, :search, :show, :new, :edit, :update]
   before_action :category_obj, only: [:index, :search, :show, :new, :edit, :update]
   def index
-    @articles = Article.all
+    @articles = Article.includes(:user).order('created_at DESC')
   end
 
   def new
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @results = @p.result
+    @results = @p.result.includes(:user).order('created_at DESC')
   end
 
   private

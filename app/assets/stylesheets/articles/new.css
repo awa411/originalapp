@@ -37,6 +37,10 @@
   letter-spacing: 0.1em;
 }
 
+.field_with_errors {
+  display: contents;
+}
+
 .new-article-form {
   display: flex;
   flex-direction: column;

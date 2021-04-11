@@ -4,7 +4,14 @@
     <%= render partial: "shared/side" %>
   </div>
   <div class="main">
-    <div class="page-text">検索結果</div>
+    <div class="page-text">
+      <% unless params[:q][:title_eq] == nil || params[:q][:title_eq] == "" %>
+      タイトル「<%= params[:q][:title_eq] %>」
+      <% end %>
+      <% unless params[:q][:category_id_eq] == nil %>
+      カテゴリ：<%= Category.find(params[:q][:category_id_eq]).name %>
+      <% end %>
+    </div>
     <div class="article-wrapper">
     <% if @results.length !=0 %>
       <% @results.each do |article| %>

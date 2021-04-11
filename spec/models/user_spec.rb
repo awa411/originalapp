@@ -64,7 +64,6 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = "111111b"
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmationとPasswordの入力が一致しません")
-        binding.pry
       end
     end
   end

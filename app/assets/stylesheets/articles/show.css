@@ -57,6 +57,7 @@
   width: 70%;
   margin-top: 3%;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
   font-family: Makinas-4-Square;
   letter-spacing: 0.1em;
   line-height: 1.5;
