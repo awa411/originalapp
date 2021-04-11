@@ -15,11 +15,12 @@
  */
 
  a:hover {
-  color: rgb(8, 8, 8);
+  color: gray;
 }
 
+.page-text,
 a {
-  color: gray;
+  color:black;
 }
 
 html {

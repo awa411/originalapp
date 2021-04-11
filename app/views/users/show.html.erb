@@ -11,7 +11,7 @@
         <%= link_to image_tag(article.image, class: "user-article-image"), article_path(article.id) %>
         <%= link_to article.title, article_path(article.id), class: "user-article-title" %>
         <div class="user-article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
-        <% if article.user_id == current_user.id %>
+        <% if user_signed_in? && article.user_id == current_user.id %>
           <div class="user-article-ope">
             <%= link_to "編集", edit_article_path(article.id), class: "user-article-edit" %>
             <%= link_to "削除", article_path(article.id), method: :delete, class: "user-article-destroy" %>
