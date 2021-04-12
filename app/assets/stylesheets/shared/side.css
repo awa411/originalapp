@@ -1,15 +1,47 @@
 .edit-article-side,
-.show-article-side,
-.user-side,
 .new-article-side,
+.user-side,
 .side {
-  border-right: rgb(240, 232, 232) solid 3px;
+  width: 200px;
+}
+
+.show-article-side {
+  height: 100%;
+  width: 200px;
+  position: absolute;
 }
 
 .categories {
+  width: 100%;
+  height: 100%;
+  border-right: rgb(240, 232, 232) solid 3px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: white;
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.show-categories {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border-right: rgb(240, 232, 232) solid 3px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .category a,

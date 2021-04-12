@@ -1,7 +1,13 @@
 <%= render "shared/header" %>
 <div class="show-article-middle" >
-  <div class="show-article-side">
-    <%= render partial: "shared/side" %>
+  <div class="show-article-side", id="show-article-side">
+    <div class="show-categories", id="show-categories">
+      <% @categories.each do |category| %>
+        <div class="category">
+          <%=link_to category.name, articles_search_path(@q, :'q[category_id_eq' => "#{category.id}") %>
+        </div>
+      <%end%>
+    </div>
   </div>
   <div class="show-article-main">
     <div class="show-article-content">

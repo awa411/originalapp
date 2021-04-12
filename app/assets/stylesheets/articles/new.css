@@ -4,10 +4,6 @@
   padding-bottom: 60px;
 }
 
-.new-article-side {
-  width: 200px;
-}
-
 .new-article-main {
   width: calc(100% - 200px);
 }

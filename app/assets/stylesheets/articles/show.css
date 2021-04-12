@@ -1,16 +1,14 @@
 .show-article-middle {
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding-bottom: 60px;
-}
-
-.show-article-side {
-  width: 200px;
+  background-image: url("cork-board.png");
+  position: relative;
 }
 
 .show-article-main {
   display: flex;
-  width: calc(100% - 200px);
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -21,7 +19,7 @@
   width: 90%;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: 100px;
   border-left: solid 1px black;
   border-bottom: solid 6px rgb(170, 168, 168);
   box-shadow: 4px 4px 8px;

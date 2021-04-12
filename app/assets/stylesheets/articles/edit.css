@@ -4,10 +4,6 @@
   padding-bottom: 60px;
 }
 
-.edit-article-side {
-  width: 200px;
-}
-
 .edit-article-main {
   width: calc(100% - 200px);
 }

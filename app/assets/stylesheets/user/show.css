@@ -4,10 +4,6 @@
   padding-bottom: 60px;
 }
 
-.user-side {
-  width: 200px;
-}
-
 .user-main {
   width: calc(100% - 200px);
 }

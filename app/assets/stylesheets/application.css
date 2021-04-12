@@ -36,7 +36,7 @@ body {
 .registration-middle,
 .edit-article-main,
 .new-article-main,
-.show-article-main,
+.show-article-middle,
 .main,
 .user-main {
   background-image: url("cork-board.png");
@@ -46,6 +46,11 @@ body {
 .user-article-content,
 .show-article-content {
   background-image: url("notebook.png");
+}
+
+.search-btn-view {
+  background-image: url("虫眼鏡の無料アイコン10.png");
+  background-size: cover;
 }
 
 

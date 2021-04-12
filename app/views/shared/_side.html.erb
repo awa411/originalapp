@@ -1,4 +1,4 @@
-  <div class="categories">
+  <div class="categories", id="categories">
     <% @categories.each do |category| %>
       <div class="category">
         <%=link_to category.name, articles_search_path(@q, :'q[category_id_eq' => "#{category.id}") %>

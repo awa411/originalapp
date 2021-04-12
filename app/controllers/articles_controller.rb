@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
+      ActionCable.server.broadcast "article_channel", content: @article
       redirect_to root_path
     else
       search_articles
