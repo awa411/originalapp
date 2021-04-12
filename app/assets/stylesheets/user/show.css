@@ -13,7 +13,6 @@
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-family: Makinas-4-Square;
 }
 
 .user-article-wrapper {
@@ -40,7 +39,6 @@
 .user-article-edit,
 .user-article-destroy{
   text-decoration: none;
-  font-family: Makinas-4-Square;
 }
 
 
@@ -59,7 +57,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 15px;
-  font-family: Makinas-4-Square;
 }
 
 .user-article-nickname {

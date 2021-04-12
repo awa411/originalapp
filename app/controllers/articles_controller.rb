@@ -15,7 +15,15 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      ActionCable.server.broadcast "article_channel", content: @article
+      @image = url_for(@article.image)
+      @user = @article.user
+      @category_name = Category.find(@article.category_id).name
+      @user_path = user_path(@article.user_id)
+      @category_path = articles_search_path(@q, :'q[category_id_eq' => "#{@article.category_id}")
+      @article_path = article_path(@article.id)
+
+      ActionCable.server.broadcast 'article_channel', article: @article, user: @user, category_name: @category_name, image: @image,
+                                                      user_path: @user_path, category_path: @category_path, article_path: @article_path
       redirect_to root_path
     else
       search_articles

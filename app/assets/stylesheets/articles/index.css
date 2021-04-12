@@ -13,7 +13,6 @@
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-family: Makinas-4-Square;
 }
 
 .article-wrapper {
@@ -24,7 +23,22 @@
   padding: 20px;
 }
 
+@keyframes contents-fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .article-content {
+  animation-name: contents-fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
   width: calc((100% - 60px) / 3 );
   margin-bottom: 5%;
   padding: 20px;
@@ -40,7 +54,6 @@
 .article-nickname,
 .article-nickname a {
   text-decoration: none;
-  font-family: Makinas-4-Square;
 }
 
 

@@ -32,6 +32,57 @@ body {
   position: relative;
 }
 
+@font-face {
+  font-family: 'makinas-lite';
+  src: url('makinas-lite.woff') format("woff"),
+       url('makinas-lite.woff2') format('woff2'); 
+} 
+
+.page-text,
+.error-message,
+.edit-article-title,
+.edit-article-text,
+.edit-article-post,
+.article-title,
+.article-category a,
+.article-category,
+.article-nickname,
+.article-nickname a,
+.new-article-title,
+.new-article-text,
+.new-article-post,
+.show-article-image,
+.show-article-title,
+.show-article-category,
+.show-article-nickname,
+.show-article-text,
+.show-to-toppage,
+.new-article,
+.new-article a,
+.user-nickname-text,
+.user-nickname-text a,
+.signin,
+.signin a,
+.signup,
+.signup a,
+.signout,
+.signout a,
+.category a,
+.category,
+.user-page-text,
+.user-article-image,
+.user-article-title,
+.user-article-category a,
+.user-article-nickname a,
+.user-article-edit,
+.user-article-destroy,
+.user-article-category,
+.search-keyword,
+.search-btn,
+.search-category select {
+  font-family: 'makinas-lite';
+ }
+
 .session-middle,
 .registration-middle,
 .edit-article-main,
@@ -48,10 +99,6 @@ body {
   background-image: url("notebook.png");
 }
 
-.search-btn-view {
-  background-image: url("虫眼鏡の無料アイコン10.png");
-  background-size: cover;
-}
 
 
 

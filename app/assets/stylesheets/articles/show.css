@@ -31,7 +31,6 @@
 .show-article-category,
 .show-article-nickname {
   margin: 10px;
-  font-family: Makinas-4-Square;
 }
 
 .show-article-title {
@@ -56,7 +55,6 @@
   margin-top: 3%;
   overflow-wrap: break-word;
   white-space: pre-wrap;
-  font-family: Makinas-4-Square;
   letter-spacing: 0.1em;
   line-height: 1.5;
 }
@@ -64,7 +62,6 @@
 .show-to-toppage {
   text-decoration: none;
   margin-top: 1%;
-  font-family: Makinas-4-Square;
 }
 
 
