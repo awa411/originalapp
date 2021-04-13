@@ -9,8 +9,12 @@
       <%= form_with model: @article, url: article_path(@article.id), local: true, class: "edit-article-form" do |f| %>
   
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
-
-        <%= f.file_field :image, id: "edit-article_image", class: "edit-article-image" %>
+        <div id="image-list">
+          <div id="image-element">
+            <%= image_tag @article.image, id: 'blob-image' if @article.image.present? %>
+          </div>
+        </div>
+        <%= f.file_field :image, id: "new-article_image", class: "edit-article-image" %>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "edit-article-category") %>
         <%= f.text_field :title, placeholder: "タイトル", class: "edit-article-title" %>
         <%= f.text_area :text, placeholder: "本文", class: "edit-article-text" %>

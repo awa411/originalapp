@@ -42,6 +42,16 @@
   padding-bottom: 60px;
 }
 
+#image-element {
+  width: 20%;
+  height: 100%;
+}
+
+#blob-image {
+  width: 100%;
+  height: 100%;
+}
+
 .new-article-category,
 .new-article-title,
 .new-article-text,
