@@ -6,7 +6,7 @@
     <div class="search-area">
       <%= search_form_for @p, url: articles_search_path, class: "search-form" do |f| %>
         <label class="label-search-btn">
-          <img src="assets/虫眼鏡の無料アイコン10.png" class="search-btn-view">
+          <img src="../../assets/虫眼鏡の無料アイコン10.png" class="search-btn-view">
             <%= f.submit "検索", class: "search-btn" %>
         </label>
         <%= f.search_field :title_eq, placeholder: "記事タイトルを入力してください", class: "search-keyword" %>
