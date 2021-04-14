@@ -42,6 +42,31 @@
   padding-bottom: 60px;
 }
 
+#image-list {
+  display: flex;
+}
+
+#image-element {
+  width: 20%;
+  height: 100%;
+  margin-right: 1%;
+}
+
+#blob-image {
+  width: 100%;
+  height: 100%;
+}
+
+#input-list {
+  position: relative;
+  margin-top: 1%;
+}
+
+.article_image_input {
+  position: absolute;
+  left: 0px
+}
+
 .new-article-category,
 .new-article-title,
 .new-article-text,

@@ -5,10 +5,10 @@ class Article < ApplicationRecord
     validates :title
     validates :text
     validates :category_id
-    validates :image
+    validates :images
   end
 
   belongs_to :category
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
 end

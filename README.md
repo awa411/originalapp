@@ -7,7 +7,6 @@
 
 ### Association
 has_many :articles
-has_many :purchases
 
 
 # ArticleTable
@@ -20,15 +19,3 @@ has_many :purchases
 
 ### Association
 be_longs :user
-has_many :purchases
-
-
-# PurchaseTable
-| Column                  | Type       | Options                   |
-| ----------------------- | ---------- | ------------------------- |
-| user                    | references | foreign_key:true          |
-| article                 | references | foreign_key:true          |
-
-### Association
-be_longs :user
-be_longs :article
