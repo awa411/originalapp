@@ -14,9 +14,13 @@
       <div class="show-article-title"><%= @article.title %></div>
       <div class="show-article-category">カテゴリー：<%= link_to @article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{@article.category_id}") %></div>
       <div class="show-article-nickname">筆者：<%= link_to @article.user.nickname, user_path(@article.user_id) %></div>
+       <ul class="slick01">
       <% @article.images.each do |image|%>
-        <%= image_tag(image, class: "show-article-image") %>
+         <% i = 0 %>
+         <li><%= image_tag image.variant(resize: '500x500'), id: "#{i}" %></li>
+         <% i = i + 1 %>
       <% end %>
+       </ul>
       <div class="show-article-text"><%= @article.text %></div>
        <%= link_to "トップページへ", root_path, class: "show-to-toppage" %>
     </div>

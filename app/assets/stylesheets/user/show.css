@@ -64,3 +64,23 @@
   font-size: 15px;  
 }
 
+.slick-slide img {
+	width: 100%;
+  border: white solid 3px
+}
+
+.slick-slide{
+  margin-right: 1vw!important;
+  margin-left: 1vw!important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots2 li button {      
+  background: transparent;   
+  border:0;   
+  font-size: 0pt; 
+}
