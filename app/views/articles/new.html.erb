@@ -10,7 +10,7 @@
 
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
         <div id="image-list"></div>
-        <%= f.file_field :image, id: "new-article_image", class: "new-article-image" %>
+        <%= f.file_field :images, name: "article[images][]", id: "article_image_-1", class: "new-article-image" %>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "new-article-category") %>
         <%= f.text_field :title, placeholder: "タイトル", class: "new-article-title" %>
         <%= f.text_area :text, placeholder: "本文", class: "new-article-text" %>
