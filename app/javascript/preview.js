@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
   const imageList = document.getElementById("image-list");
+  const inputList = document.getElementById("input-list");
   
   const createImageHTML = (blob) => {
     const imageElement = document.createElement('div');
@@ -16,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function(){
     inputHTML.setAttribute('class', 'article_image_input')
     inputHTML.setAttribute('type', 'file');
     imageElement.appendChild(blobImage);
-    imageList.insertAdjacentElement('afterend', inputHTML)
+    inputList.appendChild(inputHTML)
     imageList.appendChild(imageElement);
+    document.getElementById(`article_image_${imageElementNum - 1}`).setAttribute('style', 'visibility: hidden;');
 
     inputHTML.addEventListener('change', (e) => {
       const file = e.target.files[0];
@@ -33,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function(){
      };
      blobImage.parentNode.remove();
      if (document.getElementsByClassName('article_image_input').length == 1 & document.getElementById("article_image_-1").value == "" ) {
-      document.getElementById("article_image_-1").previousElementSibling.remove();
+      document.getElementById("article_image_-1").nextElementSibling.remove();
+      document.getElementById("article_image_-1").removeAttribute('style', 'visibility: hidden;');
+
      }
     });
   };

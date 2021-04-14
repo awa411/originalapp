@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      @image = url_for(@article.image)
+      @image = url_for(@article.images[0])
       @user = @article.user
       @category_name = Category.find(@article.category_id).name
       @user_path = user_path(@article.user_id)

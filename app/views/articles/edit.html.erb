@@ -9,14 +9,10 @@
       <%= form_with model: @article, url: article_path(@article.id), local: true, class: "edit-article-form" do |f| %>
   
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
-        <div id="image-list">
-          <% @article.images.each do |image|%>
-            <div id="image-element">
-              <%= image_tag image id: 'blob-image' %>
-            </div>
-          <% end %>
+        <div id="image-list"></div>
+        <div id="input-list">
+        <%= f.file_field :images, name: "article[images][]", id: "article_image_-1", class: "new-article-image" %>
         </div>
-        <%= f.file_field :image, id: "new-article_image", class: "edit-article-image" %>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "edit-article-category") %>
         <%= f.text_field :title, placeholder: "タイトル", class: "edit-article-title" %>
         <%= f.text_area :text, placeholder: "本文", class: "edit-article-text" %>

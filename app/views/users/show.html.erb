@@ -8,7 +8,7 @@
   <div class="user-article-wrapper">
     <% @articles.each do |article| %>
       <div class="user-article-content">
-        <%= link_to image_tag(article.image, class: "user-article-image"), article_path(article.id) %>
+        <%= link_to image_tag(article.images[0], class: "user-article-image"), article_path(article.id) %>
         <%= link_to article.title, article_path(article.id), class: "user-article-title" %>
         <div class="user-article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
         <% if user_signed_in? && article.user_id == current_user.id %>

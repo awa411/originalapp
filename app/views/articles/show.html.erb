@@ -14,7 +14,9 @@
       <div class="show-article-title"><%= @article.title %></div>
       <div class="show-article-category">カテゴリー：<%= link_to @article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{@article.category_id}") %></div>
       <div class="show-article-nickname">筆者：<%= link_to @article.user.nickname, user_path(@article.user_id) %></div>
-      <%= image_tag(@article.image, class: "show-article-image") %>
+      <% @article.images.each do |image|%>
+        <%= image_tag(image, class: "show-article-image") %>
+      <% end %>
       <div class="show-article-text"><%= @article.text %></div>
        <%= link_to "トップページへ", root_path, class: "show-to-toppage" %>
     </div>
