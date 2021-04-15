@@ -19,7 +19,7 @@
   width: 90%;
   flex-direction: column;
   align-items: center;
-  margin: 100px;
+  margin: 2%;
   border-left: solid 1px black;
   border-bottom: solid 6px rgb(170, 168, 168);
   box-shadow: 4px 4px 8px;
@@ -43,14 +43,17 @@
   object-fit: cover;
 }
 
+.show-article-category,
 .show-article-category a{
   text-decoration: none;
+  color: rgb(105, 103, 103);
 }
 
 .show-article-nickname a,
 .show-article-nickname{
   text-decoration: none;
   margin-bottom: 5%;
+  color: rgb(105, 103, 103);
 }
 
 .show-article-text {
@@ -61,11 +64,12 @@
   letter-spacing: 0.1em;
   line-height: 2;
   font-size: 25px;
+  color: rgb(105, 103, 103);
 }
 
 .show-to-toppage {
   text-decoration: none;
-  margin-top: 1%;
+  margin-top: 7%;
 }
 
 .slick-slider {

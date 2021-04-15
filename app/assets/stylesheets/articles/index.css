@@ -73,9 +73,17 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 15px;
+  color: rgb(105, 103, 103);
+}
+.article-category a {
+  color: rgb(105, 103, 103);
 }
 
 .article-nickname {
   margin-bottom: 10px;
-  font-size: 15px;  
+  font-size: 15px; 
+  color: rgb(105, 103, 103); 
+}
+.article-nickname a {
+  color: rgb(105, 103, 103);
 }

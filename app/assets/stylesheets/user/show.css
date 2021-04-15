@@ -30,6 +30,9 @@
   border-bottom: solid 6px rgb(170, 168, 168);
   box-shadow: 4px 4px 8px;
   border-radius: 9px;
+  animation-name: contents-fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
 }
 
 .user-article-image,
@@ -58,11 +61,13 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 15px;
+  color: rgb(105, 103, 103);
 }
 
 .user-article-nickname {
   margin-bottom: 10px;
-  font-size: 15px;  
+  font-size: 15px;
+  color: rgb(105, 103, 103);  
 }
 
 .slick-slide img {
