@@ -1,4 +1,4 @@
-if (document.URL.match( /show/ )) {
+if (location.pathname.match( "article" )) {
   window.addEventListener('load', function(){
     const side = document.getElementById("show-article-side")
     side.addEventListener('mouseover', function(){
