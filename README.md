@@ -19,7 +19,7 @@
 #### 「投稿」を押下
 #### 投稿完了後はトップページへ遷移する
 
-[![Image from Gyazo](https://i.gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96.gif)](https://gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96)
+![demo](https://i.gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96.gif)](https://gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96)
 
 [![Image from Gyazo](https://i.gyazo.com/a2bef87ba988369f3eaf964ac55723a2.gif)](https://gyazo.com/a2bef87ba988369f3eaf964ac55723a2)
 
