@@ -27,6 +27,16 @@ if (document.URL.match( /new/ )) {
         const blob = window.URL.createObjectURL(file);
         createImageHTML(blob);
       });
+
+      blobImage.addEventListener('mouseover', () => {
+        blobImage.setAttribute('style', "opacity: 0.4;")
+      });
+
+      blobImage.addEventListener('mouseout', () => {
+        blobImage.removeAttribute('style', "opacity: 0.4;")
+      });
+
+
       
       blobImage.addEventListener('click', () => {
       const targetInput = document.getElementById(`${blobImage.className}`);
