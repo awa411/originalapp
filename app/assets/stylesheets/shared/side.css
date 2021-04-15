@@ -9,6 +9,7 @@
   height: 100%;
   width: 200px;
   position: absolute;
+  z-index: 1;
 }
 
 .categories {

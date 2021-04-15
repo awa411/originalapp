@@ -40,22 +40,15 @@ body {
 
 .page-text,
 .error-message,
-.edit-article-title,
-.edit-article-text,
 .edit-article-post,
-.article-title,
 .article-category a,
 .article-category,
 .article-nickname,
 .article-nickname a,
-.new-article-title,
-.new-article-text,
 .new-article-post,
 .show-article-image,
-.show-article-title,
 .show-article-category,
 .show-article-nickname,
-.show-article-text,
 .show-to-toppage,
 .new-article,
 .new-article a,
@@ -71,7 +64,6 @@ body {
 .category,
 .user-page-text,
 .user-article-image,
-.user-article-title,
 .user-article-category a,
 .user-article-nickname a,
 .user-article-edit,
@@ -81,7 +73,19 @@ body {
 .search-btn,
 .search-category select {
   font-family: 'makinas-lite';
- }
+}
+
+.new-article-title,
+.new-article-text,
+.edit-article-title,
+.edit-article-text,
+.article-title,
+.show-article-title,
+.show-article-text,
+.user-article-title {
+  font-family: HiraMaruProN-W4;
+}
+
 
 .session-middle,
 .registration-middle,

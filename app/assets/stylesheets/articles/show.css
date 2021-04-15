@@ -46,8 +46,10 @@
   text-decoration: none;
 }
 
-.show-article-nickname a{
+.show-article-nickname a,
+.show-article-nickname{
   text-decoration: none;
+  margin-bottom: 5%;
 }
 
 .show-article-text {
@@ -56,7 +58,8 @@
   overflow-wrap: break-word;
   white-space: pre-wrap;
   letter-spacing: 0.1em;
-  line-height: 1.5;
+  line-height: 2;
+  font-size: 25px;
 }
 
 .show-to-toppage {
@@ -66,6 +69,10 @@
 
 .slick-slider {
   width: 80%;
+}
+
+div[class*="slick"] {
+  z-index: 0;
 }
 
 
