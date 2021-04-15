@@ -5,6 +5,7 @@ if (location.pathname.match( "article" )) {
       centerPadding: '30%',
       dots: true,
       dotsClass: 'slick-dots2',
+      focusOnSelect: true,
     });
   });
 };
