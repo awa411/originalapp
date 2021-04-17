@@ -10,15 +10,10 @@ consumer.subscriptions.create("ArticleChannel", {
   },
 
   received(data) {
-  //   const html =`
-  //   <div class="article-content">
-  //   <a href="/articles/30"><img class="article-image" src="${data.image}">${data.article.title}</a>
-  //   <div class="article-category">カテゴリー：<a href="/articles/search?q%5Bcategory_id_eq=${data.article.category_id}">${data.category_name}</a></div>
-  //   <div class="article-nickname">筆者：<a href="/users/${data.user.id}">${data.user.nickname}</a></div>
-  // </div>`;
 
     const html =`
     <div class="article-content">
+        <div class="new_icon">NEW</div>
         <a href="${data.article_path}"><img class="article-image" src="${data.image}"></a>
         <a class="article-title" href="${data.article_path}">${data.article.title}</a>
         <div class="article-category">カテゴリー：<a href="${data.category_path}">${data.category_name}</a></div>
