@@ -34,7 +34,7 @@
   
 #### <br>他ユーザーの新規投稿記事をリアルタイム表示
 
-[![Image from Gyazo](https://i.gyazo.com/973f6e01b4c259f5e82f97098e0d22b4.gif)](https://gyazo.com/973f6e01b4c259f5e82f97098e0d22b4)
+[![Image from Gyazo](https://i.gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f.gif)](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f)
 
 
 # <br>課題解決
@@ -73,7 +73,7 @@ $ rails db:migrate
 </br>
 $ rails s
 </br>
-👉 http://localhost:3000
+http://localhost:3000
 
 # <br>開発環境
 
