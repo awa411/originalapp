@@ -18,23 +18,27 @@
 #### トップページへ遷移する
 #### 「投稿」を押下
 #### 投稿完了後はトップページへ遷移する
+<br>
 
 [![Image from Gyazo](https://i.gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96.gif)](https://gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96)
+<br>
 
 [![Image from Gyazo](https://i.gyazo.com/a2bef87ba988369f3eaf964ac55723a2.gif)](https://gyazo.com/a2bef87ba988369f3eaf964ac55723a2)
 
-#### <br>記事一覧画面から投稿記事を選択 → 記事閲覧画面へ遷移する
+#### <br>記事一覧画面から投稿記事を選択 → 記事閲覧画面へ遷移する<br>
 
 [![Image from Gyazo](https://i.gyazo.com/9d2ff9bd015092aac158b04b1f7974de.gif)](https://gyazo.com/9d2ff9bd015092aac158b04b1f7974de)
 
 #### <br>投稿者名をクリックすると、その投稿者の投稿記事一覧が表示される
 #### 閲覧者が投稿者本人であれば投稿の編集・削除が可能になる
+<br>
 
 [![Image from Gyazo](https://i.gyazo.com/ea86d1c1e3c400bd1c6c7af1fa6ad2af.gif)](https://gyazo.com/ea86d1c1e3c400bd1c6c7af1fa6ad2af)
   
 #### <br>他ユーザーの新規投稿記事をリアルタイム表示
+<br>
 
-![demo](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f.gif/raw)
+[![Image from Gyazo](https://i.gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f.gif)](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f)
 
 
 # <br>課題解決
