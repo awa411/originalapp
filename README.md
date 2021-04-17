@@ -34,7 +34,7 @@
   
 #### <br>他ユーザーの新規投稿記事をリアルタイム表示
 
-[![Image from Gyazo](https://i.gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f.gif)](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f)
+![demo](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f/raw)
 
 
 # <br>課題解決
