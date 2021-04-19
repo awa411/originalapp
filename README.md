@@ -34,9 +34,9 @@
 #### 閲覧者が投稿者本人であれば投稿の編集・削除が可能になる
 <br>
 
-![ezgif-3-a430cbad58d1](https://user-images.githubusercontent.com/79493278/115212461-82879c80-a13b-11eb-8610-e01bfb1f64a1.gif)
+![ezgif-3-d9f5b87e3a9c](https://user-images.githubusercontent.com/79493278/115218274-57a04700-a141-11eb-9326-e45cb1f60835.gif)
 
-  
+
 #### <br>他ユーザーの新規投稿記事をリアルタイム表示
 <br>
 
