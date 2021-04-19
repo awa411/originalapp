@@ -20,25 +20,27 @@
 #### 投稿完了後はトップページへ遷移する
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96.gif)](https://gyazo.com/dbb17a35a9f181cf39258d0d0ec0ea96)
+![dbb17a35a9f181cf39258d0d0ec0ea96](https://user-images.githubusercontent.com/79493278/115208828-f7f16e00-a137-11eb-9bf1-2d6a2c5dc788.gif)
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/a2bef87ba988369f3eaf964ac55723a2.gif)](https://gyazo.com/a2bef87ba988369f3eaf964ac55723a2)
+![a2bef87ba988369f3eaf964ac55723a2](https://user-images.githubusercontent.com/79493278/115209304-6fbf9880-a138-11eb-89f7-6c4aab274d25.gif)
 
 #### <br>記事一覧画面から投稿記事を選択 → 記事閲覧画面へ遷移する<br>
 
-[![Image from Gyazo](https://i.gyazo.com/9d2ff9bd015092aac158b04b1f7974de.gif)](https://gyazo.com/9d2ff9bd015092aac158b04b1f7974de)
+![9d2ff9bd015092aac158b04b1f7974de](https://user-images.githubusercontent.com/79493278/115209481-9aa9ec80-a138-11eb-9da3-85c46169421c.gif)
+
 
 #### <br>投稿者名をクリックすると、その投稿者の投稿記事一覧が表示される
 #### 閲覧者が投稿者本人であれば投稿の編集・削除が可能になる
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/ea86d1c1e3c400bd1c6c7af1fa6ad2af.gif)](https://gyazo.com/ea86d1c1e3c400bd1c6c7af1fa6ad2af)
+![ezgif-3-a430cbad58d1](https://user-images.githubusercontent.com/79493278/115212461-82879c80-a13b-11eb-8610-e01bfb1f64a1.gif)
+
   
 #### <br>他ユーザーの新規投稿記事をリアルタイム表示
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f.gif)](https://gyazo.com/bc4def32606e4f2aa8e8b81b91f4396f)
+![ezgif-3-5f549878c5ce](https://user-images.githubusercontent.com/79493278/115215119-25411a80-a13e-11eb-894e-f80c5e917f10.gif)
 
 
 # <br>課題解決
