@@ -7,7 +7,6 @@
     <div class="page-text">新規投稿</div>
     <div class="new-article-wrapper">
       <%= form_with model: @article, url: articles_path, local: true, class: "new-article-form" do |f| %>
-
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
         <div id="image-list"></div>
         <div id="input-list">
