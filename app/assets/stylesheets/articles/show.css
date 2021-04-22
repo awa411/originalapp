@@ -80,6 +80,21 @@ div[class*="slick"] {
   z-index: 0;
 }
 
+.slick-slide img {
+	width: 100%;
+  border: white solid 3px
+}
+
+.slick-slide{
+  margin-right: 1vw!important;
+  margin-left: 1vw!important;
+}
+
+.slick-dots2 li button {      
+  background: transparent;   
+  border:0;   
+  font-size: 0pt; 
+}
 
 
 

@@ -2,10 +2,12 @@
   display: flex;
   width: 100vw;
   padding-bottom: 60px;
+  height: calc( 100% - 130px );
 }
 
 .main {
-  width: calc(100% - 200px);
+  width: calc( 100% - 200px );
+  height: 100%;
 }
 
 .page-text {
@@ -21,6 +23,7 @@
   justify-content: space-around;
   align-items: center; 
   padding: 20px;
+  height: 100%;
 }
 
 @keyframes contents-fade-in {
@@ -41,11 +44,13 @@
   animation-duration: 1s;
   animation-fill-mode: backwards;
   width: calc((100% - 60px) / 3 );
+  height: 10%;
   margin-bottom: 5%;
   padding: 20px;
   border-bottom: solid 6px rgb(170, 168, 168);
   box-shadow: 4px 4px 8px;
   border-radius: 9px;
+  overflow: hidden;
 }
 
 .new_icon {
@@ -75,15 +80,20 @@
 
 
 .article-image {
-  width: 100%;
-  height: 40%;
+  width: 380px;
+  height: 210px;
   margin-bottom: 5px;
   object-fit: cover;
-}
+} 
 
-.article-title{
+.article-title,
+.article-title a{
   margin-bottom: 10px;
   font-size: 30px;
+  height: 10%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .article-category {
@@ -91,6 +101,8 @@
   margin-bottom: 10px;
   font-size: 15px;
   color: rgb(105, 103, 103);
+  white-space: nowrap;
+  overflow: hidden;
 }
 .article-category a {
   color: rgb(105, 103, 103);
@@ -99,7 +111,9 @@
 .article-nickname {
   margin-bottom: 10px;
   font-size: 15px; 
-  color: rgb(105, 103, 103); 
+  color: rgb(105, 103, 103);
+  white-space: nowrap;
+  overflow: hidden; 
 }
 .article-nickname a {
   color: rgb(105, 103, 103);

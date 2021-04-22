@@ -10,7 +10,7 @@
     <% @articles.each do |article| %>
       <div class="article-content">
        
-        <%= link_to image_tag(article.images[0], class: "article-image"), article_path(article.id) %>
+        <%= link_to image_tag(article.images[0], class: "article-image"), article_path(article.id), class: "article-image-a" %>
         <%= link_to article.title, article_path(article.id), class: "article-title" %>
         <div class="article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
         <div class="article-nickname">筆者：<%= link_to article.user.nickname, user_path(article.user_id) %></div>
