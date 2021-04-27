@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   before_action :is_current_user, only: [:edit, :update, :destroy]
   before_action :search_articles, only: [:index, :search, :show, :new, :edit, :update]
   before_action :category_obj, only: [:index, :search, :show, :new, :edit, :update]
+
   def index
     @articles = Article.includes(:user).order('created_at DESC')
   end
@@ -37,13 +38,29 @@ class ArticlesController < ApplicationController
 
   def edit
     @title = @article.title
+    gon.article_id = @article.id
+    gon.images_path = []
+    @article.images.each do |image|
+      image_path = rails_blob_path(image)
+      gon.images_path << image_path
+    end 
+
   end
 
   def update
-    if @article.update(article_params)
-      redirect_to article_path(params[:id])
-    else
+    unless @article.update(article_params)
       render :edit
+    else
+      unless image_path_params == nil
+        image_path_params.each do |image_path|
+          @article.images.each do |image|
+            if rails_blob_path(image) == image_path
+            image.purge
+            end
+          end
+        end
+        render :js => "window.location = '/articles/#{@article.id}'"
+      end
     end
   end
 
@@ -58,7 +75,13 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :text, :category_id, images: []).merge(user_id: current_user.id)
+        params.require(:article).permit(:title, :text, :category_id, images: []).merge(user_id: current_user.id)
+    end
+
+    def image_path_params
+      if params.include?(:imagePaths)
+        params.require(:imagePaths)
+      end
     end
 
     def search_articles

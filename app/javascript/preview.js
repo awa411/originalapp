@@ -25,9 +25,9 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
       inputList.appendChild(inputHTML)
       imageList.appendChild(imageElement);
       if (document.getElementsByClassName('article_image_input').length == 1 ) {
-      document.getElementById(`article_image_-1`).setAttribute('style', 'visibility: hidden;');
+        document.getElementById(`article_image_-1`).setAttribute('style', 'visibility: hidden;');
       } else {
-      document.getElementById(`article_image_${imageElementNum - 1}`).setAttribute('style', 'visibility: hidden;');
+        document.getElementById(`article_image_${imageElementNum - 1}`).setAttribute('style', 'visibility: hidden;');
       }
 
       inputHTML.addEventListener('change', (e) => {
@@ -44,21 +44,19 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         blobImage.removeAttribute('style', "opacity: 0.4;")
       });
 
-
-      
       blobImage.addEventListener('click', () => {
-      const targetInput = document.getElementById(`${blobImage.className}`);
-      targetInput.value = "";
-      if (!(targetInput.id == 'article_image_-1')) {
-        targetInput.remove();
-      };
-      blobImage.parentNode.setAttribute('style', 'display: none;')
-      blobImage.remove();
+        const targetInput = document.getElementById(`${blobImage.className}`);
+        targetInput.value = "";
+        if (!(targetInput.id == 'article_image_-1')) {
+          targetInput.remove();
+        };
+        blobImage.parentNode.setAttribute('style', 'display: none;')
+        blobImage.remove();
 
-      if (document.getElementsByClassName('article_image_input').length == 1 && document.getElementById('article_image_-1').value == "" ) {
-        document.getElementById('article_image_-1').nextElementSibling.remove();
-        document.getElementById('article_image_-1').removeAttribute('style', 'visibility: hidden;');
-      }
+        if (document.getElementsByClassName('article_image_input').length == 1 && document.getElementById('article_image_-1').value == "" ) {
+          document.getElementById('article_image_-1').nextElementSibling.remove();
+          document.getElementById('article_image_-1').removeAttribute('style', 'visibility: hidden;');
+        }
       });
     };
     
