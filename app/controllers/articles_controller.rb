@@ -55,12 +55,12 @@ class ArticlesController < ApplicationController
         image_path_params.each do |image_path|
           @article.images.each do |image|
             if rails_blob_path(image) == image_path
-            image.purge
+            image.purge_later
             end
           end
         end
-        render :js => "window.location = '/articles/#{@article.id}'"
       end
+      render :js => "window.location = '/articles/#{@article.id}'"
     end
   end
 

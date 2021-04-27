@@ -70,6 +70,7 @@
 }
 
 .article-image,
+.article-image-sample,
 .article-title,
 .article-category a,
 .article-category,
@@ -85,6 +86,12 @@
   margin-bottom: 5px;
   object-fit: cover;
 } 
+
+.article-image-sample {
+  width: 380px;
+  height: 210px;
+  margin-bottom: 5px;
+}
 
 .article-title,
 .article-title a{
