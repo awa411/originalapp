@@ -5,7 +5,6 @@ class Article < ApplicationRecord
     validates :title
     validates :text
     validates :category_id
-    validates :images
   end
 
   belongs_to :category

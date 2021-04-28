@@ -6,7 +6,7 @@
   <div class="edit-article-main">
     <div class="page-text"><%= "記事を編集する" %></div>
     <div class="edit-article-wrapper">
-      <%= form_with model: @article, url: article_path(@article.id), local: true, class: "edit-article-form" do |f| %>
+      <%= form_with model: @article, url: article_path(@article.id), local: true, class: "edit-article-form", id: "edit-article-form" do |f| %>
   
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
         <div id="image-list"></div>
