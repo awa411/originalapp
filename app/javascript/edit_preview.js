@@ -9,7 +9,6 @@ if (document.URL.match( /edit/ ) ) {
       blobImage.setAttribute('id', `exists-blob-image_${count}`);
       blobImage.setAttribute('class', 'exists_blob_image');
       blobImage.addEventListener('click', () => {
-        //const jsonPath = JSON.stringify(path);
         imagePaths.push(path);
         blobImage.remove();
       });
@@ -33,7 +32,6 @@ if (document.URL.match( /edit/ ) ) {
         url:         '/articles/' + gon.article_id,
         type:        "PATCH",
         data:        formData,
-        // dataType:    'json',
         contentType: false,
         processData: false,
       });
