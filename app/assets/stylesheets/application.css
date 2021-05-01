@@ -71,7 +71,8 @@ body {
 .user-article-category,
 .search-keyword,
 .search-btn,
-.search-category select {
+.search-category select,
+#drop-text {
   font-family: 'makinas-lite';
 }
 

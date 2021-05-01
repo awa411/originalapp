@@ -1,6 +1,8 @@
 if (document.URL.match( /edit/ ) ) {
   document.addEventListener('DOMContentLoaded', function(){
     const imageList = document.getElementById("image-list");
+    const dropText = document.getElementById('drop-text');
+    const imageArea = document.getElementById('image-area')
     let count = 0;
     let imagePaths = [];
     gon.images_path.forEach(function(path){
@@ -11,6 +13,9 @@ if (document.URL.match( /edit/ ) ) {
       blobImage.addEventListener('click', () => {
         imagePaths.push(path);
         blobImage.remove();
+        if(imageList.childElementCount == 0){
+          dropText.removeAttribute('style', 'display: none;');
+        };
       });
       blobImage.addEventListener('mouseover', () => {
         blobImage.setAttribute('style', "opacity: 0.4;")
