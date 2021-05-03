@@ -79,29 +79,29 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
      
      body.addEventListener('dragover', (e) => {
        e.preventDefault();
-       imageArea.setAttribute('style', 'background-color: rgba(206, 207, 196, 0.4);')
+       imageList.setAttribute('style', 'background-color: rgba(206, 207, 196, 0.4);')
       });
 
-      imageArea.addEventListener('dragover', (e) => {
+      imageList.addEventListener('dragover', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        imageArea.setAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
+        imageList.setAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
       });
       
       body.addEventListener('dragleave', (e) => {
         e.preventDefault();
-        imageArea.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4);')
+        imageList.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4);')
       });
       
-      imageArea.addEventListener('dragleave', (e) => {
+      imageList.addEventListener('dragleave', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        imageArea.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
+        imageList.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
       });
 
-      imageArea.addEventListener('drop', (e) => {
+      imageList.addEventListener('drop', (e) => {
         e.preventDefault();
-        imageArea.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
+        imageList.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
         dropText.setAttribute('style', 'display: none;');
         const input = document.querySelector("input[class*='focus_input']");
         input.files = e.dataTransfer.files;
