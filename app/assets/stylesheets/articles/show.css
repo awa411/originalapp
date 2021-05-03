@@ -8,7 +8,7 @@
 
 .show-article-main {
   display: flex;
-  width: 100%;
+  width: 85%;
   flex-direction: column;
   align-items: center;
 }
@@ -16,10 +16,10 @@
 
 .show-article-content {
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  margin: 2%;
+  margin: 2% 2% 2% -15%;
   border-left: solid 1px black;
   border-bottom: solid 6px rgb(170, 168, 168);
   box-shadow: 4px 4px 8px;

@@ -42,8 +42,23 @@
   padding-bottom: 60px;
 }
 
+#image-area{
+  position: relative;
+  height: 30%;
+}
+
+#drop-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  margin: auto;
+  color: white
+}
+
 #image-list {
   display: flex;
+  height: 80%;
 }
 
 #image-element {
@@ -64,7 +79,12 @@
 
 .article_image_input {
   position: absolute;
-  left: 0px
+  left: 0px;
+  color: rgba(0,0,0,0);
+}
+
+#article_image_-1{
+  color: rgba(0,0,0,0);
 }
 
 .new-article-category,
