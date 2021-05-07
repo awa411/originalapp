@@ -64,7 +64,7 @@
   letter-spacing: 0.1em;
   line-height: 2;
   font-size: 25px;
-  color: rgb(105, 103, 103);
+  color: rgb(37, 37, 37);
 }
 
 .show-to-toppage {
@@ -86,14 +86,21 @@ div[class*="slick"] {
 }
 
 .slick-slide{
-  margin-right: 1vw!important;
-  margin-left: 1vw!important;
+  margin-right: 3vw!important;
+  margin-left: 3vw!important;
 }
 
 .slick-dots2 li button {      
   background: transparent;   
   border:0;   
   font-size: 0pt; 
+}
+
+.slick-initialized .slick-slide{
+  opacity: 0.2;
+}
+.slick-initialized .slick-slide.slick-active{
+  opacity: 1;
 }
 
 
