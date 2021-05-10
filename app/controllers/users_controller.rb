@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @categories = Category.all
     @p = Article.ransack(params[:q])
     @user = User.find(params[:id])
-    @articles = Article.where(user_id: params[:id])
+    @articles = Article.where(user_id: params[:id]).includes(:user).order('created_at DESC')
   end
 
   private

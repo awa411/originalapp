@@ -61,6 +61,7 @@ header {
 
 #q_category_id_eq {
   margin-left: 1%;
+  cursor: pointer;
 }
 
 .label-search-btn {
@@ -72,6 +73,7 @@ header {
 .search-btn-view {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .search-btn {
