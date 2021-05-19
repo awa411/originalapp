@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
  a:hover {
@@ -83,7 +84,9 @@ body {
 .article-title,
 .show-article-title,
 .show-article-text,
-.user-article-title {
+.user-article-title,
+.user-page-text-name,
+.user-nickname-text-name a {
   font-family: HiraMaruProN-W4;
 }
 
@@ -103,5 +106,6 @@ body {
 .show-article-content {
   background-image: url("notebook.png");
 }
+
 
 

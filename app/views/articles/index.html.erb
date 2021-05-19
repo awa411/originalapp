@@ -18,6 +18,11 @@
         <%= link_to article.title, article_path(article.id), class: "article-title" %>
         <div class="article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
         <div class="article-nickname">筆者：<%= link_to article.user.nickname, user_path(article.user_id) %></div>
+        <% if current_user.bookmark?(article) %>
+          <%= render 'bookmarks/unbookmark', article: article %>
+        <% else %>
+          <%= render 'bookmarks/bookmark', article: article %>
+        <% end %>
       </div>
     <% end %>
 

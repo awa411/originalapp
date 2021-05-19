@@ -4,9 +4,9 @@
     <%= render partial: "shared/side" %>
   </div>
   <div class="user-main">
-  <div class="user-page-text"><span class="user-page-text-name"><%= @user.nickname %></span>さんの投稿記事</div>
+  <div class="user-page-text"><span class="user-page-text-name"><%= current_user.nickname %></span>さんのお気に入り記事</div>
   <div class="user-article-wrapper">
-    <% @articles.each do |article| %>
+    <% @bookmarks_articles.each do |article| %>
       <div class="user-article-content">
         <% unless article.images.length == 0 %>
           <%= link_to image_tag(article.images[0], class: "user-article-image"), article_path(article.id) %>
