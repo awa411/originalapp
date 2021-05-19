@@ -2,8 +2,8 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destoy]
   before_action :article_find, only: [:show, :edit, :update, :destroy]
   before_action :is_current_user, only: [:edit, :update, :destroy]
-  before_action :search_articles, only: [:index, :search, :show, :new, :edit, :update]
-  before_action :category_obj, only: [:index, :search, :show, :new, :edit, :update]
+  before_action :search_articles, only: [:index, :bookmarks, :search, :show, :new, :edit, :update]
+  before_action :category_obj, only: [:index, :bookmarks, :search, :show, :new, :edit, :update]
 
   def index
     @articles = Article.includes(:user).order('created_at DESC')
@@ -71,6 +71,11 @@ class ArticlesController < ApplicationController
 
   def search
     @results = @p.result.includes(:user).order('created_at DESC')
+  end
+
+  def bookmarks
+    @bookmarks_articles =
+    current_user.bookmarks_articles.includes(:user).order('created_at DESC')
   end
 
   private

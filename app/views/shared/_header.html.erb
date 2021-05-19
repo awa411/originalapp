@@ -19,7 +19,7 @@
       <% end %>
       <ul class="list-user">
         <% if user_signed_in?%>
-            <li class="user-nickname-text"><%= link_to current_user.nickname, user_path(current_user.id) %>さん</li>
+            <li class="user-nickname-text"><span class="user-nickname-text-name"><%= link_to current_user.nickname, user_path(current_user.id) %></span>さん</li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout" %></li>
         <% else %>
             <li><%= link_to "新規登録", new_user_registration_path, class: 'signup' %></li>

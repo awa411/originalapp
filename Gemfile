@@ -65,3 +65,4 @@ gem 'rails-i18n'
 gem 'ransack'
 gem "aws-sdk-s3", require: false
 gem "gon"
+gem 'font-awesome-rails'

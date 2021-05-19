@@ -54,7 +54,7 @@
 # <br>要件定義
 | 機能           | 概要             |
 | -------------- | -----------------|
-| ユーザー管理機能　| 新規登録・ログイン・ログアウトが可能  |
+| ユーザー管理機能 | 新規登録・ログイン・ログアウトが可能  |
 | 投稿機能 | 画像付きで記事投稿が可能 |
 | 投稿詳細表示機能 | 各投稿記事の詳細が詳細ページで閲覧可能 |
 | 投稿編集・削除機能 | 投稿者本人のみ投稿編集・削除が可能 |
@@ -101,6 +101,7 @@ http://localhost:3000
 
 #### <br>Association
 has_many :articles
+has_many :bookmarks
 
 
 ### <br>ArticleTable
@@ -113,3 +114,16 @@ has_many :articles
 
 ### <br>Association
 be_longs :user
+has_many :bookmarks
+
+
+
+### <br>Bookmark
+| Column                  | Type       | Options                   |
+| ----------------------- | ---------- | ------------------------- |
+| user                    | references | foreign_key:true          |
+| article                 | references | foreign_key:true          |
+
+### <br>Association
+be_longs :user
+be_longs :article
