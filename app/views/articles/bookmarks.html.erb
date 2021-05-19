@@ -23,10 +23,12 @@
         <% else %>
           <div class="user-article-nickname">筆者：<%= link_to article.user.nickname, user_path(article.user.id) %></div>
         <% end %>
-        <% if current_user.bookmark?(article) %>
-          <%= render 'bookmarks/unbookmark', article: article %>
-        <% else %>
-          <%= render 'bookmarks/bookmark', article: article %>
+        <% if user_signed_in? %>
+          <% if current_user.bookmark?(article) %>
+            <%= render 'bookmarks/unbookmark', article: article %>
+          <% else %>
+            <%= render 'bookmarks/bookmark', article: article %>
+          <% end %>
         <% end %>
       </div>
     <% end %>
