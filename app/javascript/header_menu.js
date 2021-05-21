@@ -10,21 +10,20 @@ document.addEventListener('DOMContentLoaded', function(){
       headerMenu.removeAttribute('style', 'color: gray;')
     });
     
-    headerMenu.addEventListener('click', () => {
-      if (headerMenuLi.style.display == 'none') {
-        headerMenuLi.setAttribute('style', 'display: block;')
-      } else {
-        headerMenuLi.setAttribute('style', 'display: none;')
-      }
-    });
-    
     document.addEventListener('click', (e) =>{
+      if(e.target.closest('#header-menu')) {
+        if (headerMenuLi.style.display == 'none') {
+          headerMenuLi.style.display = "block";
+        } else {
+          headerMenuLi.style.display = "none";
+        }      
+      }
       if(!e.target.closest('#header-menu')) {
         if (headerMenuLi.style.display == 'block') {
-          headerMenuLi.setAttribute('style', 'display: none;')
+          headerMenuLi.style.display = "none";
         }
       }
-    })
+    });
 
   };
 });

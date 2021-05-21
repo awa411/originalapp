@@ -126,6 +126,33 @@
   color: rgb(105, 103, 103);
 }
 
+.fa-star {
+  color:  rgb(228 206 10);
+  font-size: 140%;
+}
+
+.fa-star:hover {
+  opacity: 0.5;
+}
+
+.bookmark{
+  text-decoration: none;
+}
+
+.bookmark:hover .bookmark-text{
+  display: inline;
+}
+
+.bookmark-text{
+  display: none;
+  padding: 2%;
+  color: aliceblue;
+  border-radius: 5px;
+  background-color: rgb(214 193 8);
+  font-size: 85%;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .article-image {
     height: 150px;

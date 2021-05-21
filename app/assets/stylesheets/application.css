@@ -39,22 +39,19 @@ body {
        url('makinas-lite.woff2') format('woff2'); 
 } 
 
-.page-text,
+
 .error-message,
 .edit-article-post,
 .article-category a,
 .article-category,
 .article-nickname,
-.article-nickname a,
 .new-article-post,
 .show-article-image,
 .show-article-category,
-.show-article-nickname,
 .show-to-toppage,
 .new-article,
 .new-article a,
 .user-nickname-text,
-.user-nickname-text a,
 .signin,
 .signin a,
 .signup,
@@ -63,7 +60,6 @@ body {
 .signout a,
 .category a,
 .category,
-.user-page-text,
 .user-article-image,
 .user-article-category a,
 .user-article-nickname a,
@@ -77,6 +73,11 @@ body {
   font-family: 'makinas-lite';
 }
 
+.user-page-text,
+.user-nickname-text a,
+.show-article-nickname,
+.article-nickname a,
+.page-text,
 .new-article-title,
 .new-article-text,
 .edit-article-title,
@@ -86,7 +87,8 @@ body {
 .show-article-text,
 .user-article-title,
 .user-page-text-name,
-.user-nickname-text-name a {
+.user-nickname-text-name a,
+#header-menu {
   font-family: HiraMaruProN-W4;
 }
 

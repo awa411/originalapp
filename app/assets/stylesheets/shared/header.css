@@ -98,7 +98,7 @@ header {
 }
 
 .list-user {
-  margin-left: 30%;
+  margin-left: 25%;
 }
 
 .user-nickname-text,
@@ -114,15 +114,39 @@ header {
 .signup,
 .signup a,
 .signout,
-.signout a{
+.signout a,
+.bookmarks,
+.bookmarks a{
  text-decoration: none;
  margin-top: 5%;
  font-size: 100%;
 }
 
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #header-menu li{
+  animation-name: SlideIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
   display: none;
   position: absolute;
   border-bottom: rgb(240, 234, 234) solid 3px;
   background-color: white;
+  padding-top: 0.5%;
+  width: 6%;
+  margin-left: -0.5%;
+}
+
+.header-menu-li {
+  font-size: 85%;
+  padding: 0% 9%;
 }
