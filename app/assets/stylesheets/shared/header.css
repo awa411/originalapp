@@ -119,3 +119,10 @@ header {
  margin-top: 5%;
  font-size: 100%;
 }
+
+#header-menu li{
+  display: none;
+  position: absolute;
+  border-bottom: rgb(240, 234, 234) solid 3px;
+  background-color: white;
+}

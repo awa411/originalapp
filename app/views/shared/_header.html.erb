@@ -20,7 +20,9 @@
       <ul class="list-user">
         <% if user_signed_in?%>
             <li class="user-nickname-text"><span class="user-nickname-text-name"><%= link_to current_user.nickname, user_path(current_user.id) %></span>さん</li>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout" %></li>
+            <ul id="header-menu">MENU▼
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout" %></li>
+            </ul>
         <% else %>
             <li><%= link_to "新規登録", new_user_registration_path, class: 'signup' %></li>
             <li><%= link_to "ログイン", new_user_session_path, class: 'signin' %></li>
