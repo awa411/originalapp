@@ -25,11 +25,27 @@
   0% {
     visibility: hidden;
     opacity: 0;
+    transform: translateX(-15%);
   }
-
+  
   100% {
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-Out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-15%);
   }
 }
 

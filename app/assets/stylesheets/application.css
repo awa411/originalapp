@@ -66,7 +66,6 @@ body {
 .user-article-edit,
 .user-article-destroy,
 .user-article-category,
-.search-keyword,
 .search-btn,
 .search-category select,
 #drop-text {
@@ -88,7 +87,8 @@ body {
 .user-article-title,
 .user-page-text-name,
 .user-nickname-text-name a,
-#header-menu {
+#header-menu,
+.search-keyword {
   font-family: HiraMaruProN-W4;
 }
 

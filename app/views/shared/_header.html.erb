@@ -21,7 +21,7 @@
         <% if user_signed_in?%>
             <li class="user-nickname-text"><span class="user-nickname-text-name"><%= link_to current_user.nickname, user_path(current_user.id) %></span>さん</li>
             <ul id="header-menu">MENU▼
-              <li style="display: none;">
+              <li id="header-menu-li" style="display: none;">
                 <%= link_to "お気に入り", bookmarks_articles_path, class: "bookmarks header-menu-li" %>
                 <br>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "signout header-menu-li" %>

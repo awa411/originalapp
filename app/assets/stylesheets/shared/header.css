@@ -133,8 +133,19 @@ header {
   }
 }
 
-#header-menu li{
-  animation-name: SlideIn;
+@keyframes SlideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+#header-menu-li{
+  /* animation-name: SlideIn; */
   animation-duration: 0.5s;
   animation-fill-mode: backwards;
   display: none;
@@ -144,6 +155,7 @@ header {
   padding-top: 0.5%;
   width: 6%;
   margin-left: -0.5%;
+  z-index: 1;
 }
 
 .header-menu-li {
