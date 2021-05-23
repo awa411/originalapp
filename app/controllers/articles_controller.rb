@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destoy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destoy, :bookmarks]
   before_action :article_find, only: [:show, :edit, :update, :destroy]
   before_action :is_current_user, only: [:edit, :update, :destroy]
   before_action :search_articles, only: [:index, :bookmarks, :search, :show, :new, :edit, :update]
