@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    article = current_user.bookmarks.find_by(params[:id]).article
+    article = current_user.bookmarks.find_by(id: params[:id]).article
     current_user.unbookmark(article)
     redirect_back fallback_location: root_path, success: 'ブックマークを外しました'
   end
