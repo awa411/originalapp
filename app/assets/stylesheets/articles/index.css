@@ -139,11 +139,27 @@
   text-decoration: none;
 }
 
-.bookmark:hover .bookmark-text{
-  display: inline;
+
+@keyframes bookmark-text-fade-in {
+  0% {
+    display: inline;
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+    display: inline;
+  }
 }
 
+.bookmark:hover .bookmark-text{
+  animation-name: bookmark-text-fade-in;
+  display: inline;
+} 
+
 .bookmark-text{
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
   display: none;
   padding: 2%;
   color: aliceblue;
