@@ -26,7 +26,7 @@
   height: 100%;
 }
 
-.user-article-content {
+/* .user-article-content {
   position: relative;
   animation-name: contents-fade-in;
   animation-duration: 1s;
@@ -39,7 +39,6 @@
   box-shadow: 4px 4px 8px;
   border-radius: 9px;
   overflow: hidden;
-
 }
 
 .user-article-image,
@@ -107,4 +106,4 @@
   .user-article-content {
     width: calc((100% - 200px) / 3 );
   }
-}
+} */

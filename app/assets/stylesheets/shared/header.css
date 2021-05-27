@@ -3,7 +3,7 @@ header {
   height: 70px;
   width: 100vw;
   border-bottom: rgb(240, 234, 234) solid 3px;
-  padding-top: 1%;
+  padding-top: 0.5%;
 }
 
 .user-page-header {

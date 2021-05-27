@@ -203,9 +203,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(243, 238, 165);
   height: 70px;
-  border-bottom: rgb(240, 234, 234) solid 3px;
   padding-top: 1%;
 }
 
