@@ -88,7 +88,8 @@ body {
 .user-page-text-name,
 .user-nickname-text-name a,
 #header-menu,
-.search-keyword {
+.search-keyword,
+.flash-message {
   font-family: HiraMaruProN-W4;
 }
 

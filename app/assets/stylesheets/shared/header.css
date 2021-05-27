@@ -145,7 +145,6 @@ header {
 }
 
 #header-menu-li{
-  /* animation-name: SlideIn; */
   animation-duration: 0.5s;
   animation-fill-mode: backwards;
   display: none;

@@ -1,1 +1,18 @@
-document.getElementById('article_<%= @article.id %>').innerHTML = '<%= escape_javascript( render 'shared/articles', article: @article ) %>'
+if(document.getElementById('article_<%= @article.id %>').innerHTML = '<%= escape_javascript( render 'shared/articles', article: @article ) %>'){
+  if(document.getElementById('flash-message')){
+    document.getElementById('flash-message').remove();
+  }
+  const flashMessage = document.createElement('div');
+  flashMessage.setAttribute('class', 'flash-message')
+  flashMessage.setAttribute('id', 'flash-message')
+  flashMessage.setAttribute("style", `top: ${window.scrollY}px; animation-name: flash-message-fade;` );
+  flashMessage.innerHTML = "お気に入りを解除しました"
+  const html = document.querySelector("html");
+  html.prepend(flashMessage)
+  document.addEventListener('scroll', function(){
+    flashMessage.style.top = `${window.scrollY}px`
+  })
+  window.setTimeout(function(){
+    flashMessage.remove();
+  }, 4000);
+}

@@ -168,8 +168,45 @@
   text-align: center;
 }
 
-.unbookmark-text{
+.unbookmark-text {
   animation-delay: 1s;
+}
+
+@keyframes flash-message-fade {
+  0% {
+    display: inline;
+    opacity: 0;
+  }
+  
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.flash-message {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 70px;
+  border-bottom: rgb(240, 234, 234) solid 3px;
+  padding-top: 1%;
 }
 
 @media (max-width: 600px) {
