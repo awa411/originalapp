@@ -98,7 +98,8 @@ header {
 }
 
 .list-user {
-  margin-left: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-nickname-text,
@@ -107,6 +108,9 @@ header {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .signin,

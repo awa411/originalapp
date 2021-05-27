@@ -15,6 +15,7 @@
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: 3px 2px 2px #676363;
 }
 
 .user-article-wrapper {
@@ -24,6 +25,11 @@
   align-items: center; 
   padding: 20px;
   height: 100%;
+}
+
+.user-article-edit,
+.user-article-destroy{
+  text-decoration: none;
 }
 
 /* .user-article-content {

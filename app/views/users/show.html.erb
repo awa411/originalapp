@@ -8,7 +8,19 @@
   <div class="user-article-wrapper">
     <% @articles.each do |article| %>
       <div class="article-content" id="article_<%= article.id %>">
-        <%= render 'shared/articles', article: article %>
+        <% unless article.images.length == 0 %>
+          <%= link_to image_tag(article.images[0], class: "article-image"), article_path(article.id), class: "article-image-a" %>
+        <% else %>
+          <%= link_to image_tag('1617965615639.png', class: 'article-image-sample'), article_path(article.id), class: "article-image-a" %>
+        <% end %>
+        <br>
+        <%= link_to article.title, article_path(article.id), class: "article-title" %>
+        <div class="article-category">カテゴリー：<%= link_to article.category.name, articles_search_path(@q, :'q[category_id_eq' => "#{article.category_id}") %></div>
+        <div class="article-nickname">筆者：<%= link_to article.user.nickname, user_path(article.user_id) %></div>
+        <div class="user-article-ope">
+          <%= link_to "編集", edit_article_path(article.id), class: "user-article-edit" %>
+          <%= link_to "削除", article_path(article.id), method: :delete, class: "user-article-destroy" %>
+        </div>
       </div>
     <% end %>
 
