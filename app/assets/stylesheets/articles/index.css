@@ -176,24 +176,34 @@
   0% {
     display: inline;
     opacity: 0;
+    transform: scaleY(-1);
+    background-color: rgb(235, 247, 129);
+  }
+
+  10% {
+    opacity: 0.5;
   }
   
   20% {
     opacity: 1;
+    transform: scaleY(1)
   }
 
-  80% {
+  90% {
     opacity: 1;
+    transform: scaleY(1);
   }
 
   100% {
     opacity: 0;
+    transform: scaleY(0);
     display: none;
+    background-color: white;
   }
 }
 
 .flash-message {
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   opacity: 0;
   display: none;
@@ -203,7 +213,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(243, 238, 165);
+  /* background-color: rgb(243, 238, 165); */
   height: 70px;
   padding-top: 1%;
 }
