@@ -164,7 +164,7 @@
   padding: 2%;
   color: aliceblue;
   border-radius: 5px;
-  background-color: rgb(214 193 8);
+  background-color: rgb(214, 193, 8);
   font-size: 85%;
   text-align: center;
 }
@@ -214,7 +214,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(243, 238, 165); */
   height: 70px;
   padding-top: 1%;
 }
