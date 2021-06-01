@@ -9,11 +9,12 @@
       <%= form_with model: @article, url: articles_path, local: true, class: "new-article-form" do |f| %>
         <%= render partial: "shared/error_message", locals: { model: f.object },  class: "error-messages"%>
         <div id="image-area">
-          <div id="image-list"></div>
-          <div id="input-list">
-            <%= f.file_field :images, name: "article[images][]", id: "article_image_-1", class: "new-article-image" %>
+          <div id="image-list">
+            <span id="drop-text">添付する画像をドロップ</span>
           </div>
-          <span id="drop-text">ここに添付する画像をドロップ</span>
+          <div id="input-list">
+            <%= f.file_field :images, name: "article[images][]", id: "input_article_image_-1", class: "new-article-image" %>
+          </div>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "new-article-category") %>
         <%= f.text_field :title, placeholder: "タイトル", class: "new-article-title" %>
