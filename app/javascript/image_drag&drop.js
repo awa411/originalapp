@@ -2,9 +2,10 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
   document.addEventListener('DOMContentLoaded', function(){
     const imageList = document.getElementById("image-list");
     const inputList = document.getElementById("input-list");
-    const newArticleImage = document.getElementById("input_article_image_-1");
-    newArticleImage.setAttribute('class', 'focus_input');
+    const firstInput = document.getElementById("input_article_image_-1");
     const dropText = document.getElementById('drop-text');
+    const body = document.querySelector('body');
+    firstInput.setAttribute('class', 'focus_input');
     if(imageList.childElementCount > 1 ){
       dropText.setAttribute('style', 'display: none;')
     };
@@ -31,18 +32,18 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
       inputList.appendChild(inputHTML)
       imageList.appendChild(imageElement);
       if (document.getElementsByClassName('article_image_input').length == 1 ) {
-        document.getElementById(`input_article_image_-1`).setAttribute('style', 'visibility: hidden; color: rgba(0,0,0,0);');
-        document.getElementById(`input_article_image_-1`).classList.remove('focus_input');
+        firstInput.setAttribute('style', 'visibility: hidden; color: rgba(0,0,0,0);');
+        firstInput.classList.remove('focus_input');
       } else {
         document.getElementById(`input_article_image_${imageElementNum - 1}`).setAttribute('style', 'visibility: hidden; color: rgba(0,0,0,0);');
         document.getElementById(`input_article_image_${imageElementNum - 1}`).classList.remove('focus_input');
       }
 
-      inputHTML.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        const blob = window.URL.createObjectURL(file);
-        createImageHTML(blob);
-      });
+      // inputHTML.addEventListener('change', (e) => {
+      //   const file = e.target.files[0];
+      //   const blob = window.URL.createObjectURL(file);
+      //   createImageHTML(blob);
+      // });
 
       blobImage.addEventListener('mouseover', () => {
         blobImage.setAttribute('style', "opacity: 0.4;")
@@ -62,23 +63,17 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         blobImage.parentNode.setAttribute('style', 'display: none;')
         blobImage.remove();
 
-        if (document.getElementsByClassName('article_image_input').length == 1 && document.getElementById('input_article_image_-1').value == "" ) {
-          document.getElementById('input_article_image_-1').nextElementSibling.remove();
-          document.getElementById('input_article_image_-1').removeAttribute('style', 'visibility: hidden;');
-          document.getElementById('input_article_image_-1').setAttribute('class', 'focus_input');
+        if (document.getElementsByClassName('article_image_input').length == 1 && firstInput.value == "" ) {
+          firstInput.nextElementSibling.remove();
+          firstInput.removeAttribute('style', 'visibility: hidden;');
+          firstInput.setAttribute('class', 'focus_input');
           dropText.removeAttribute('style', 'display: none;');
         }
       });
      };
 
-
-
-     
-    const body = document.querySelector('body');
-
     body.addEventListener('dragover', (e) => {
       e.preventDefault();
-      e.stopPropagation();
       imageList.setAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
     });
     
@@ -91,16 +86,9 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
       e.preventDefault();
       imageList.removeAttribute('style', 'background-color: rgba(206, 207, 196, 0.4); border: 3px solid lightblue;')
       dropText.setAttribute('style', 'display: none;');
-      const input = document.querySelector("input[class*='focus_input']");
+      const input = document.querySelector(".focus_input");
       input.files = e.dataTransfer.files;
       const blob = window.URL.createObjectURL(input.files[0]);
-      createImageHTML(blob);
-    });
-
-    newArticleImage.addEventListener('change', (e) => {
-      dropText.setAttribute('style', 'display: none;');
-      const file = e.target.files[0];
-      const blob = window.URL.createObjectURL(file);
       createImageHTML(blob);
     });
   });
