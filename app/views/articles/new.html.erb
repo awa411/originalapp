@@ -16,7 +16,7 @@
             <%= f.file_field :images, name: "article[images][]", id: "input_article_image_-1", class: "new-article-image" %>
           </div>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "指定なし"}, class: "new-article-category") %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {include_blank: "カテゴリーを選択"}, class: "new-article-category") %>
         <%= f.text_field :title, placeholder: "タイトル", class: "new-article-title" %>
         <%= f.text_area :text, placeholder: "本文", class: "new-article-text" %>
         <%= f.submit "投稿", class: "new-article-post", id: "new-article-post" %>

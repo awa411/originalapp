@@ -53,9 +53,8 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         blobImage.removeAttribute('style', "opacity: 0.4;")
       });
 
-      blobImage.addEventListener('click', (e) => {
+      blobImage.addEventListener('click', () => {
         const targetInput = document.getElementById(`input_${blobImage.id}`);
-        console.log(targetInput.id)
         targetInput.value = "";
         if (!(targetInput.id == 'input_article_image_-1')) {
           targetInput.remove();
