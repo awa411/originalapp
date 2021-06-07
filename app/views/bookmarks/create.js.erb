@@ -7,7 +7,7 @@ if(document.getElementById('article_<%= @article.id %>').innerHTML = '<%= escape
   flashMessage.setAttribute('id', 'flash-message')
   flashMessage.setAttribute("style", `top: ${window.scrollY}px; animation-name: flash-message-fade;` );
   flashMessage.innerHTML = "お気に入りに登録しました"
-  const html = document.querySelector("html");
+  const html = document.querySelector("body");
   html.prepend(flashMessage)
   document.addEventListener('scroll', function(){
     flashMessage.style.top = `${window.scrollY}px`
