@@ -13,7 +13,8 @@ if (document.URL.match( /edit/ ) ) {
       blobImage.addEventListener('click', () => {
         imagePaths.push(path);
         blobImage.remove();
-        if(imageList.childElementCount == 0){
+        if(imageList.childElementCount == 1){
+          console.log('a')
           dropText.removeAttribute('style', 'display: none;');
         };
       });

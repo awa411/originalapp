@@ -12,11 +12,6 @@ RSpec.describe Article, type: :model do
       end
     end
     context "投稿に失敗する" do
-      it "画像が空の場合、投稿に失敗する" do
-        @article.image = nil
-        @article.valid?
-        expect(@article.errors.full_messages).to include("Imageを入力してください")
-      end
       it "タイトルが空の場合、投稿に失敗する" do
         @article.title = ""
         @article.valid?

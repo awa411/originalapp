@@ -44,18 +44,18 @@ class ArticlesController < ApplicationController
       image_path = rails_blob_path(image)
       gon.images_path << image_path
     end 
-
   end
 
   def update
     unless @article.update(article_params)
-      render :edit
+      render :js => "window.location = '/articles/#{@article.id}/edit'"
+
     else
       unless image_path_params == nil
         image_path_params.each do |image_path|
           @article.images.each do |image|
             if rails_blob_path(image) == image_path
-            image.purge_later
+              image.purge_later
             end
           end
         end
