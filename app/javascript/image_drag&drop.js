@@ -39,11 +39,11 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         document.getElementById(`input_article_image_${imageElementNum - 1}`).classList.remove('focus_input');
       }
 
-      // inputHTML.addEventListener('change', (e) => {
-      //   const file = e.target.files[0];
-      //   const blob = window.URL.createObjectURL(file);
-      //   createImageHTML(blob);
-      // });
+      inputHTML.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const blob = window.URL.createObjectURL(file);
+        createImageHTML(blob);
+      });
 
       blobImage.addEventListener('mouseover', () => {
         blobImage.setAttribute('style', "opacity: 0.4;")
@@ -88,6 +88,12 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
       const input = document.querySelector(".focus_input");
       input.files = e.dataTransfer.files;
       const blob = window.URL.createObjectURL(input.files[0]);
+      createImageHTML(blob);
+    });
+
+    firstInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      const blob = window.URL.createObjectURL(file);
       createImageHTML(blob);
     });
   });

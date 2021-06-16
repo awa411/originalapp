@@ -31,9 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec-rails', '~> 4.0.0'
 end
 
 group :development do
@@ -57,12 +57,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pry-rails'
-gem  'ransack'
+gem 'ransack'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'rails-i18n'
-gem 'ransack'
 gem "aws-sdk-s3", require: false
 gem "gon"
 gem 'font-awesome-rails'

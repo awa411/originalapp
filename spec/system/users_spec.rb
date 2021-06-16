@@ -25,7 +25,7 @@ RSpec.describe "Users", type: :system do
       #トップページに遷移する
       expect(current_path).to eq(root_path)
       #ログアウトをするリンクが表示される
-      expect(page).to have_content("ログアウト")
+      expect(find('#header-menu').hover).to have_content("ログアウト")
       #新規登録およびログインをするリンクが表示されていない
       expect(page).to have_no_content("新規登録")
       expect(page).to have_no_content("ログイン")
