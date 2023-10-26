@@ -9,8 +9,6 @@
 
 シンプルで気軽に利用できる記事投稿サイト
 
-# <br>URL
-### https://originalapp-34872.herokuapp.com/
 
 # <br>利用方法
 
